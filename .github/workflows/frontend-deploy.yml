@@ -1,9 +1,23 @@
+
 name: Deploy Frontend to Azure
 
 on:
   push:
     branches:
       - main
+
+      
+      - name: Azure Login
+  uses: azure/login@v1
+  with:
+    client-id: aa42c537-87b1-4b1d-b463-e35f3d53d3e0
+    tenant-id: 51099f15-499b-44d5-a287-ac53ac263895
+    subscription-id: 4d396f51-f99a-4126-9d56-a635b461f0b1
+
+
+
+
+      
 
 jobs:
   build-and-deploy:
